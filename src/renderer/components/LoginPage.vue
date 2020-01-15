@@ -3,7 +3,7 @@
     <v-container fluid fill-height>
       <v-layout align-center justify-center>
         <v-flex xs12 sm8 md4>
-          <v-card class="elevation-17" style="-webkit-app-region: drag;" :loading="loginLoading">
+          <v-card class="elevation-17" style="-webkit-app-region: no-drag;" :loading="loginLoading">
             <v-toolbar  dark flat>
               <v-toolbar-title>EBP Login</v-toolbar-title>
               <v-spacer></v-spacer>
