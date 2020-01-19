@@ -34,30 +34,36 @@
       </v-tooltip>
     </v-app-bar>
 
+    <v-container class="fill-height" fluid>
+      <v-tabs>
+      <v-tab>
+        <v-icon>mdi-phone</v-icon> Item One</v-tab>
+      <v-tab>Item Two</v-tab>
+      <v-tab>Item Three</v-tab>
+    </v-tabs>
+    </v-container>
+
     <v-footer app>
       <!-- -->
-      <div class="red white--text">
-        이건 공지사항이야.
-      </div>
+      <div class="red white--text">이건 공지사항이야.</div>
     </v-footer>
   </div>
 </template>
 
 <script>
-import {mapState, mapActions, mapGetters} from 'vuex'
-import Const from '../Lib/VuexConst'
+import { mapState, mapActions, mapGetters } from "vuex";
+import Const from "../Lib/VuexConst";
 
 export default {
   data: () => ({
-    naviVisible: false,
+    naviVisible: false
   }),
-  mounted() {    
-  },
+  mounted() {},
   methods: {
     logout() {
-      this.naviVisible = false
-      this.setLogout()
-      this.$router.push('/')
+      this.naviVisible = false;
+      this.setLogout();
+      this.$router.push("/");
     },
     ...mapActions({
       setLogout: Const.SET_LOGOUT
@@ -68,7 +74,7 @@ export default {
       LoginCompleted: state => state.Common.loginCompleted
     }),
     ...mapGetters({
-      title: 'getTitle'
+      title: "getTitle"
     })
   }
 };
